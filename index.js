@@ -2,10 +2,11 @@ const express = require('express');
 const port = 3000;
 const app = express();
 const router = require('./modules/router');
-const article = require('./data/article.json');
+const articles = require('./data/article.json');
 
 // Récupération des articles depuis la data.json
-app.locals.article = article;
+app.locals.articles = articles;
+
 
 app.use(express.static('public'));
 app.use(router);

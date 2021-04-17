@@ -1,46 +1,15 @@
 <%- include('./partials/header.ejs') %>
+    <% for (let article of articles) {%>
                         <figure>
-                            <img src="images/business-man-beer.jpg" alt="Photo of a beer and a laptop">
-                            <figcaption class="post-image-caption">Des bulles et des points virgules</figcaption>
+                            <img src="<%=article.img%>" alt="<%=article.img_alt%>">
+                            <figcaption class="post-image-caption"><%=article.sub_title%></figcaption>
                         </figure>
                         <main class="post-description">
                             <div class="post-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tellus id orci
-                                    placerat tincidunt. Vestibulum vehicula pretium faucibus. Phasellus et quam ligula.
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                                    Curae;
-                                    Sed sed rutrum ligula, sit amet euismod nisl. Duis consectetur malesuada arcu non
-                                    faucibus. Donec dignissim ut libero ornare suscipit. Donec egestas eros vel eros
-                                    aliquet
-                                    cursus. Curabitur et nisi elementum, lobortis ligula at, viverra purus. Sed faucibus
-                                    augue lorem, varius porttitor enim consectetur nec. Duis mollis, mi sed cursus
-                                    fringilla, nisl eros euismod urna, venenatis vulputate nunc orci quis arcu. Sed
-                                    imperdiet lectus eu finibus consectetur. Cras congue eu ligula vel aliquam.</p>
-                                <p>Duis sed orci arcu. Etiam imperdiet dictum mi ut consequat. Duis eget dui vitae
-                                    sapien
-                                    sagittis mattis. Morbi non justo fringilla, ullamcorper ex sed, aliquet quam.
-                                    Vestibulum
-                                    rutrum egestas commodo. Ut tristique, nunc non interdum commodo, magna neque
-                                    ultrices
-                                    tortor, nec ornare odio massa sit amet felis. Morbi dapibus orci ut ante aliquam
-                                    accumsan. Nulla vitae odio efficitur, mollis augue vel, ultrices massa. Vivamus id
-                                    interdum sem. Nulla facilisi. Phasellus eleifend placerat ex, at vulputate orci
-                                    feugiat
-                                    a. Vivamus eget auctor neque. Morbi nec tellus consequat, ultricies dui eget,
-                                    accumsan
-                                    elit. Curabitur aliquet, risus non vehicula sagittis, augue nisi consectetur magna,
-                                    efficitur fermentum sapien arcu vel velit. Ut facilisis odio odio, vel lobortis
-                                    augue
-                                    sagittis aliquet.</p>
-                                <p>Nam lorem ante, consequat imperdiet vestibulum ac, tincidunt vestibulum lorem. Fusce
-                                    quam
-                                    mi, congue sit amet tortor et, varius vulputate enim. Mauris ut dignissim lorem.
-                                    Nulla
-                                    at dictum dolor. Etiam nec laoreet magna, id elementum diam. Donec aliquam non ex
-                                    sit
-                                    amet ultricies. Nulla ultrices feugiat laoreet.</p>
+                                <p><%=article.text%></p>
                             </div>
                         </main>
                     </div>
+                    <% } %>
                 </article>
 <%- include('./partials/footer.ejs') %>
