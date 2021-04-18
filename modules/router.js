@@ -18,4 +18,17 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
+router.get('/article/:id', (req, res) => {
+    const articleAsked = req.params.id;
+    console.log(articleAsked);
+
+    const goodArticle = articles.find(article => article.id === articleAsked);
+
+    if (goodArticle) {
+        res.render(goodArticle.id, goodArticle);
+    } else {
+        res.status(404).render('404');
+    };
+});
+
 module.exports = router;

@@ -1,11 +1,10 @@
 <%- include('./partials/header.ejs') %>
-
 <% for (let article of articles) {%>
         <article class="post pure-u-1 pure-u-md-1 pure-u-lg-1-2 pure-u-xl-1-3">
           <div class="post-content post--category-devops"
           style="background-image: url(<%=article.img%>)">
             <header class="post-header">
-              <h2 class="post-title"><a href="article.html"><%=article.title%></a></h2>
+              <h2 class="post-title"><a href="/article/<%=article.id%>"><%=article.title%></a></h2>
               <span class="post-image-caption"><%=article.sub_title%></span>
 
               <p class="post-meta">
@@ -15,13 +14,11 @@
             </header>
             <main class="post-summary">
               <p>
-                <%=article.text.slice(0, 30)%><a href="#">[lire
+                <%=article.text.slice(0, 70)%><a href="/article/<%=article.id%>">[lire
                   plus…]</a>
               </p>
             </main>
           </div>
         </article>
-
-       
       <% } %>
 <%- include('./partials/footer.ejs') %>         
